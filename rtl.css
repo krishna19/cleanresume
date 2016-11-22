@@ -1,0 +1,76 @@
+/*
+Theme Name: CleanResume
+
+Adding support for language written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+http://codex.wordpress.org/Right_to_Left_Language_Support
+
+*/
+
+@import url(assets/css/bootstrap-rtl.min.css);
+
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+ul {padding: 0 20px 0 0;}
+.noPadding {padding: 0;}
+.form-group, .form-control, input, textarea, select {text-align: right;}
+
+.resume-options {text-align: left;}
+.resume-options .btn span {margin-left: 5px; margin-right: 0;}
+
+.say-hello {left: auto; right: 0;}
+.say-hello::after {border-left-color: #0099cc; border-right-color: transparent; right: auto; left: 15px;}
+
+.title::before, 
+.avatar-contact-info span {margin-left: 8px; margin-right: 0;}
+
+.avatar-information td:first-child::after {float: left; margin-left: 24px; margin-right: 0;}
+
+.content-wrapper {padding-left: 40px; padding-right: 0;}
+
+.has-timeline > .row > div:last-child::before {left: left; right: 18px;}
+.has-timeline > .row > div:last-child::after {left: auto; right: 12px;}
+.has-timeline .experience-company {margin-left: 0; margin-right: 25px;}
+.has-timeline .experience-year {margin-left: 0; margin-right: 25px;}
+.summary .read-more {display: inline-block !important;}
+
+.progress .pull-left {float: right !important;}
+.progress .pull-right {float: left !important;}
+
+.avatar-services li::before {margin-left: 8px; margin-right: 0;}
+
+.avatar-interests li::before,
+.avatar-languages li::before {left: auto; right: -24px;}
+
+.sidebar-wrapper li small {margin-left: 0; margin-right: 8px; display: inline-block;}
+.sidebar-wrapper li small::before {margin-left: 10px; margin-right: 0;}
+.sidebar-wrapper li small.language-skills {float: left !important;}
+
+.blueimp-gallery > .title {right: 15px; left: auto; margin: 0 0 0 40px;}
+.blueimp-gallery > .title:before {float: right;}
+.blueimp-gallery > .close {left: 15px !important; right: auto !important;}
+
+.blog-timeline > .post-item.timeline-inverted > .timeline-badge {right: right: 97.5%;; right: calc(100% - 13px);}
+#blog .timeline-badge .tooltip-inner {background-color: #0099cc}
+#blogPost-modal #main {padding: 0;}
+#blogPost-modal #main > .wrapper {padding: 0;}
+#blogPost-modal .close {right: auto; left: 8px;}
+#blogPost-modal .modal-header {padding-left: 60px; padding-right: 20px; border-bottom: none}
+#blogPost-modal .post-meta {margin-left: 0; margin-right: 0; border-top: solid 1px #ddd;}
+#blogPost-modal .post-meta > span, .archive .post-meta > span, .search .post-meta > span, .single .post-meta > span {display: inline-block; margin-right: 0; margin-left: 25px;}
+#blogPost-modal .modal-body {margin-left: 0; margin-right: 0;}
+#blogPost-modal .modal-footer {margin-left: 0; margin-right: 0; text-align: right;}
+
+.logged-in-as a {float: right; margin-left: 8px;}
+.comment-list .comment {overflow: hidden;}
+.comment-list .reply {left: 0; right: auto;}
+.comment-list .comment-author {margin-left: 15px; margin-bottom: 10px; margin-right: 0; float: right;}
+.comment-list .comment-author .avatar {float: right; margin-left: 12px; margin-right: 0;}
+.comment-list .comment-metadata {float: right;}
+.comment-list .comment-metadata::before {margin-left: 15px; margin-right: 0;}
+.comment-list .comment-content {margin-left: 0; margin-right: 78px; clear: both; width: 100%; float: right;}
+.single .comment-list .comment-content {margin-top: -35px; text-align: right; display: block; clear: both; width: 100%; float: right;}
